@@ -38,7 +38,7 @@ $(document).ready(function(){
     var depth = 40;
     for(var i=0; i<window.dancers.length; i++){
       window.dancers[i].$node.css({top: depth, left: 10})
-      depth += 40
+      depth += 90
 
       }
   })

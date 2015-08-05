@@ -21,19 +21,19 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:20px solid red;
   border-radius:10px;
   position:absolute;
 }
 
 .turtle{
-  border:10px solid green;
-  border-radius:10px;
+  border:70px solid green;
+  border-radius:50%;
   position:absolute;
 }
 
 .sky{
-  border:10px solid orange;
-  border-radius:10px;
+  border:40px solid orange;
+  border-radius: 75%;
   position:absolute;
 }
