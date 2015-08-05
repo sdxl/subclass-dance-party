@@ -6,10 +6,10 @@ var Dancer = function(top, left, timeBetweenSteps){
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
   this.timeBetweenSteps = timeBetweenSteps;
-  this.top = top;
-  this.left = left;
+  //this.top = top;
+  //this.left = left;
   this.step();
-  this.setPosition(this.top, this.left);
+  this.setPosition(top, left);
 };
 
 
@@ -26,8 +26,8 @@ var Dancer = function(top, left, timeBetweenSteps){
     // where it belongs on the page. See http://api.jquery.com/css/
     //
     var styleSettings = {
-      top: this.top,
-      left: this.left
+      top: top,
+      left: left
     };
     this.$node.css(styleSettings);
   };

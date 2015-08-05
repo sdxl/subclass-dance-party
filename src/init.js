@@ -15,11 +15,12 @@ $(document).ready(function(){
      * A new object of the given type will be created and added
      * to the stage.
      */
+
+
+
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
-    console.log(typeof dancerMakerFunctionName)
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-    console.log(typeof dancerMakerFunction)
     // make a dancer with a random position
 
 
@@ -28,7 +29,23 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+
+  $(".LineUp").on("click", function(){
+    var depth = 40;
+    for(var i=0; i<window.dancers.length; i++){
+      window.dancers[i].$node.css({top: depth, left: 10})
+      depth += 40
+
+      }
+  })
+
+  $(".sky").on("click", function(){
+    $(this).hide();
+  })
+
 });
 
